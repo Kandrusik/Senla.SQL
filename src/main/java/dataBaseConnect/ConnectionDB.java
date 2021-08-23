@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class ConnectionDB {
     private static final String host = "localhost";
-    private static final String DBName = "sakila";
+    private static final String DBName = "world";
     private static final String timeZone = "?serverTimezone=Europe/Moscow";
     private static final String url = "jdbc:mysql://" + host + ":3306/" + DBName + timeZone;
     private static final String user = "root";

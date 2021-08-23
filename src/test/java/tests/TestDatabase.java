@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@DisplayName("Testing the connection to the sakila DataBase and sending requests")
+@DisplayName("Testing the connection to the world DataBase and sending requests")
 public class TestDatabase extends TestSetups {
 
     @Test
@@ -88,10 +88,10 @@ public class TestDatabase extends TestSetups {
     @Order(7)
     @DisplayName("Sending SELECT JOIN query. Checking the belonging of the city of the country")
     public void testSelectWithJoinRequest() throws SQLException {
-        String query = "SELECT city.city, address.address FROM city LEFT JOIN address ON city.city_id = address.city_id WHERE city='Vilnius'";
+        String query = "SELECT country.name, countrylanguage.language FROM country LEFT JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE Code='ESP'";
         ResultSet rs = ConnectionDB.selectFromTable(query);
-        String expectedAddress = "1059 Yuncheng Avenue";
-        String actualAddress = rs.getString("address");
-        assertEquals(expectedAddress, actualAddress, "Actual country is '" + actualAddress + "'. Expected - '" + expectedAddress + "'.");
+        String expectedCountry = "Spain";
+        String actualCountry = rs.getString("name");
+        assertEquals(expectedCountry, actualCountry, "Actual country is '" + actualCountry + "'. Expected - '" + expectedCountry + "'.");
     }
 }
