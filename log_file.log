@@ -1,0 +1,337 @@
+2021-08-23 22:14:32 INFO  Log:25 - ------- Started test: Creating a table in the database -------
+2021-08-23 22:14:32 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:33 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:33 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:34 INFO  Log:25 - Send request to DB: CREATE TABLE car_showroom (ID int(6) NOT NULL,BRAND VARCHAR(45) NOT NULL,MODEL VARCHAR(45) NOT NULL,YEAR int(4) NOT NULL,PRICE int(6) NOT NULL,PRIMARY KEY (id))
+2021-08-23 22:14:34 INFO  Log:25 - Table was created successfully
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:34 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:34 INFO  Log:25 - ------- Finished test: Creating a table in the database -------
+2021-08-23 22:14:34 INFO  Log:25 - ------- Started test: Sending INSERT query -------
+2021-08-23 22:14:34 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:34 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:34 INFO  Log:25 - Send request to DB: INSERT INTO car_showroom (ID, BRAND, MODEL, YEAR, PRICE) VALUES (7, 'NISSAN', 'PATROL', '2015', '17000')
+2021-08-23 22:14:34 INFO  Log:25 - New data was inserted into table successfully
+2021-08-23 22:14:34 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:34 INFO  Log:25 - Send request to DB: SELECT * FROM car_showroom
+2021-08-23 22:14:34 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:34 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:36 INFO  Log:25 - Request results:
++----+------+------+----+-----+
+|  ID|BRAND |MODEL |YEAR|PRICE|
++----+------+------+----+-----+
+|   7|NISSAN|PATROL|2015|17000|
++----+------+------+----+-----+
+
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - ------- Finished test: Sending INSERT query -------
+2021-08-23 22:14:36 INFO  Log:25 - ------- Started test: Sending UPDATE query -------
+2021-08-23 22:14:36 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:36 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:36 INFO  Log:25 - Send request to DB: UPDATE car_showroom SET YEAR = '2013' WHERE ID='7'
+2021-08-23 22:14:36 INFO  Log:25 - Data in table was updated successfully
+2021-08-23 22:14:36 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:36 INFO  Log:25 - Send request to DB: SELECT YEAR FROM car_showroom WHERE ID=7
+2021-08-23 22:14:36 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:36 INFO  Log:25 - Request results:
++----+
+|YEAR|
++----+
+|2013|
++----+
+
+2021-08-23 22:14:36 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:36 INFO  Log:25 - ------- Finished test: Sending UPDATE query -------
+2021-08-23 22:14:36 INFO  Log:25 - ------- Started test: Sending SELECT query. Checking the address -------
+2021-08-23 22:14:36 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:37 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:37 INFO  Log:25 - Send request to DB: SELECT * FROM car_showroom WHERE ID=7
+2021-08-23 22:14:37 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:37 INFO  Log:25 - Request results:
++----+------+------+----+-----+
+|  ID|BRAND |MODEL |YEAR|PRICE|
++----+------+------+----+-----+
+|   7|NISSAN|PATROL|2013|17000|
++----+------+------+----+-----+
+
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:37 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:37 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:37 INFO  Log:25 - ------- Finished test: Sending SELECT query. Checking the address -------
+2021-08-23 22:14:37 INFO  Log:25 - ------- Started test: Sending DELETE request -------
+2021-08-23 22:14:37 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:37 INFO  Log:25 - Send request to DB: DELETE FROM car_showroom WHERE ID=7
+2021-08-23 22:14:37 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:37 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:38 INFO  Log:25 - Data from table was deleted successfully
+2021-08-23 22:14:38 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:38 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:38 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:38 INFO  Log:25 - ------- Finished test: Sending DELETE request -------
+2021-08-23 22:14:38 INFO  Log:25 - ------- Started test: Checking delete the table from the DataBase -------
+2021-08-23 22:14:38 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:38 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:38 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:38 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:38 INFO  Log:25 - Send request to DB: DROP TABLE car_showroom
+2021-08-23 22:14:41 INFO  Log:25 - Table was deleted successfully
+2021-08-23 22:14:41 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - ------- Finished test: Checking delete the table from the DataBase -------
+2021-08-23 22:14:41 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:14:41 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:41 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:41 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:14:41 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:14:41 INFO  Log:25 - Send request to DB: SELECT city.city, address.address FROM city LEFT JOIN address ON city.city_id = address.city_id WHERE city='Vilnius'
+2021-08-23 22:14:41 ERROR Log:46 - Table 'world.address' doesn't exist
+2021-08-23 22:14:41 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:14:41 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:23:28 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:23:28 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:23:29 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:23:29 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:23:29 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:23:29 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country LEFT JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE Code='ESP'
+2021-08-23 22:23:29 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:23:29 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:23:30 INFO  Log:25 - Request results:
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Basque  |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Catalan |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Galecian|
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Spanish |
++-----+--------+
+
+2021-08-23 22:23:30 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:23:30 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:23:30 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:23:30 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:23:59 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:23:59 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:24:01 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:24:01 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:24:01 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:24:01 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country LEFT JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE Code='ESP'
+2021-08-23 22:24:01 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:24:01 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:24:02 INFO  Log:25 - Request results:
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Basque  |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Catalan |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Galecian|
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Spanish |
++-----+--------+
+
+2021-08-23 22:24:02 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:24:02 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:24:02 INFO  Log:25 - ResultSet closed successfully
+2021-08-23 22:24:02 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:41:12 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:41:12 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:41:13 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:41:13 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:41:13 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:41:13 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country FULL OUTER JOIN countrylanguage ON country.Code=countrylanguage.CountryCode ORDER BY country.region
+2021-08-23 22:41:13 ERROR Log:46 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OUTER JOIN countrylanguage ON country.Code=countrylanguage.CountryCode ORDER BY ' at line 1
+2021-08-23 22:41:13 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:41:13 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:41:13 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:41:55 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:41:55 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:41:56 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:41:56 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:41:56 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:41:56 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country FULL OUTER JOIN countrylanguage ON country.Code=countrylanguage.CountryCode ORDER BY country.region
+2021-08-23 22:41:56 ERROR Log:46 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OUTER JOIN countrylanguage ON country.Code=countrylanguage.CountryCode ORDER BY ' at line 1
+2021-08-23 22:41:56 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:41:56 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:41:56 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:42:45 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-23 22:42:45 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:42:46 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:42:46 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-23 22:42:46 INFO  Log:25 - Connection to DB successful!
+2021-08-23 22:42:46 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country FULL OUTER JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE Code='ESP'
+2021-08-23 22:42:46 ERROR Log:46 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OUTER JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE C' at line 1
+2021-08-23 22:42:46 INFO  Log:25 - Connection to DB closed successfully
+2021-08-23 22:42:46 INFO  Log:25 - Statement closed successfully
+2021-08-23 22:42:46 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-24 10:37:41 INFO  Log:25 - ------- Started test: Creating a table in the database -------
+2021-08-24 10:37:41 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:42 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:43 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:43 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:43 INFO  Log:25 - Send request to DB: CREATE TABLE car_showroom (ID int(6) NOT NULL,BRAND VARCHAR(45) NOT NULL,MODEL VARCHAR(45) NOT NULL,YEAR int(4) NOT NULL,PRICE int(6) NOT NULL,PRIMARY KEY (id))
+2021-08-24 10:37:48 INFO  Log:25 - Table was created successfully
+2021-08-24 10:37:48 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:48 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:48 INFO  Log:25 - ------- Finished test: Creating a table in the database -------
+2021-08-24 10:37:48 INFO  Log:25 - ------- Started test: Sending INSERT query -------
+2021-08-24 10:37:48 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:48 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:48 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:48 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:48 INFO  Log:25 - Send request to DB: INSERT INTO car_showroom (ID, BRAND, MODEL, YEAR, PRICE) VALUES (7, 'NISSAN', 'PATROL', '2015', '17000')
+2021-08-24 10:37:49 INFO  Log:25 - New data was inserted into table successfully
+2021-08-24 10:37:49 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:49 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:49 INFO  Log:25 - Send request to DB: SELECT * FROM car_showroom
+2021-08-24 10:37:50 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:50 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:51 INFO  Log:25 - Request results:
++----+------+------+----+-----+
+|  ID|BRAND |MODEL |YEAR|PRICE|
++----+------+------+----+-----+
+|   7|NISSAN|PATROL|2015|17000|
++----+------+------+----+-----+
+
+2021-08-24 10:37:51 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:51 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:51 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:51 INFO  Log:25 - ------- Finished test: Sending INSERT query -------
+2021-08-24 10:37:51 INFO  Log:25 - ------- Started test: Sending UPDATE query -------
+2021-08-24 10:37:51 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:51 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:51 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:51 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:51 INFO  Log:25 - Send request to DB: UPDATE car_showroom SET YEAR = '2013' WHERE ID='7'
+2021-08-24 10:37:52 INFO  Log:25 - Data in table was updated successfully
+2021-08-24 10:37:52 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:52 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:52 INFO  Log:25 - Send request to DB: SELECT YEAR FROM car_showroom WHERE ID=7
+2021-08-24 10:37:53 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:53 INFO  Log:25 - Request results:
++----+
+|YEAR|
++----+
+|2013|
++----+
+
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - ------- Finished test: Sending UPDATE query -------
+2021-08-24 10:37:53 INFO  Log:25 - ------- Started test: Sending SELECT query. Checking the address -------
+2021-08-24 10:37:53 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:53 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:53 INFO  Log:25 - Send request to DB: SELECT * FROM car_showroom WHERE ID=7
+2021-08-24 10:37:53 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:53 INFO  Log:25 - Request results:
++----+------+------+----+-----+
+|  ID|BRAND |MODEL |YEAR|PRICE|
++----+------+------+----+-----+
+|   7|NISSAN|PATROL|2013|17000|
++----+------+------+----+-----+
+
+2021-08-24 10:37:53 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:53 INFO  Log:25 - ------- Finished test: Sending SELECT query. Checking the address -------
+2021-08-24 10:37:53 INFO  Log:25 - ------- Started test: Sending DELETE request -------
+2021-08-24 10:37:53 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:54 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:54 INFO  Log:25 - Send request to DB: DELETE FROM car_showroom WHERE ID=7
+2021-08-24 10:37:54 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:54 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:54 INFO  Log:25 - Data from table was deleted successfully
+2021-08-24 10:37:54 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:54 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:54 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:54 INFO  Log:25 - ------- Finished test: Sending DELETE request -------
+2021-08-24 10:37:54 INFO  Log:25 - ------- Started test: Checking delete the table from the DataBase -------
+2021-08-24 10:37:54 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:54 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:54 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:54 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:54 INFO  Log:25 - Send request to DB: DROP TABLE car_showroom
+2021-08-24 10:37:56 INFO  Log:25 - Table was deleted successfully
+2021-08-24 10:37:56 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - ------- Finished test: Checking delete the table from the DataBase -------
+2021-08-24 10:37:56 INFO  Log:25 - ------- Started test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
+2021-08-24 10:37:56 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:56 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:56 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:56 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:56 INFO  Log:25 - Send request to DB: SELECT country.name, countrylanguage.language FROM country LEFT JOIN countrylanguage ON country.Code = countrylanguage.CountryCode WHERE Code='ESP'
+2021-08-24 10:37:56 INFO  Log:25 - Connect to DB jdbc:mysql://localhost:3306/world?serverTimezone=Europe/Moscow by user root
+2021-08-24 10:37:56 INFO  Log:25 - Connection to DB successful!
+2021-08-24 10:37:56 INFO  Log:25 - Request results:
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Basque  |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Catalan |
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Galecian|
++-----+--------+
++-----+--------+
+|name |language|
++-----+--------+
+|Spain|Spanish |
++-----+--------+
+
+2021-08-24 10:37:56 INFO  Log:25 - Connection to DB closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - Statement closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - ResultSet closed successfully
+2021-08-24 10:37:56 INFO  Log:25 - ------- Finished test: Sending SELECT JOIN query. Checking the belonging of the city of the country -------
